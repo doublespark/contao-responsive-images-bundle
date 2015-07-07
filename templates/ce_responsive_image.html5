@@ -1,0 +1,42 @@
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+  <?php if ($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+  <?php endif; ?>
+
+  <figure class="image_container"<?php if ($this->margin): ?> style="<?php echo $this->margin; ?>"<?php endif; ?>>
+
+    <?php if ($this->href): ?>
+      <a href="<?php echo $this->href; ?>"<?php if ($this->linkTitle): ?> title="<?php echo $this->linkTitle; ?>"<?php endif; ?><?php echo $this->attributes; ?>>
+    <?php endif; ?>
+
+    <?php if($this->useCSS): ?>
+        <span id="<?php echo $this->imgID; ?>" class="responsive-image-holder"></span>
+    <?php else: ?>
+        <img class="respond" data-mobile="<?php echo $this->mobile_url; ?>" data-tablet="<?php echo $this->tablet_url; ?>" data-desktop="<?php echo $this->desktop_url; ?>" data-large="<?php echo $this->large_url; ?>" src="<?php echo $this->src; ?>" alt="<?php echo $this->alt; ?>"<?php if ($this->title): ?> title="<?php echo $this->title; ?>"<?php endif; ?>>
+    <?php endif; ?>
+    <?php if ($this->href): ?>
+      </a>
+    <?php endif; ?>
+
+    <?php if ($this->caption): ?>
+      <figcaption class="caption"><?php echo $this->caption; ?></figcaption>
+    <?php endif; ?>
+
+    <?php if($this->image_text != ''): ?>
+    <div class="image_text_container">
+      <div class="image_text">
+          <div class="inside">
+              <div class="inside-content">
+                  <div class="text-box">
+                      <?php echo $this->image_text; ?>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <?php endif; ?>
+
+  </figure>
+
+</div>

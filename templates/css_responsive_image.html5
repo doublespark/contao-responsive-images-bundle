@@ -1,0 +1,37 @@
+#<?php echo $this->imgID; ?> {
+    display:block;
+    overflow:hidden;
+    background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->mobile_url; ?>') no-repeat center center;
+    max-width:<?php echo $this->mobile_width; ?>px;
+    height:<?php echo $this->mobile_height; ?>px;
+}
+
+@media screen and (min-width:700px){
+
+    #<?php echo $this->imgID; ?> {
+        background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->tablet_url; ?>') no-repeat center center;
+        max-width:<?php echo $this->tablet_width; ?>px;
+        height:<?php echo $this->tablet_height; ?>px;
+    }
+
+}
+
+@media screen and (min-width:768px){
+
+    #<?php echo $this->imgID; ?> {
+        background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->desktop_url; ?>') no-repeat center center;
+        max-width:<?php echo $this->desktop_width; ?>px;
+        height:<?php echo $this->desktop_height; ?>px;
+    }
+
+}
+
+@media screen and (min-width:1400px){
+
+    #<?php echo $this->imgID; ?> {
+        background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->large_url; ?>') no-repeat center center;
+        max-width:<?php echo $this->large_width; ?>px;
+        height:<?php echo $this->large_height; ?>px;
+    }
+
+}
