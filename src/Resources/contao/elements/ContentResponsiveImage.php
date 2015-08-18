@@ -129,8 +129,8 @@ class ContentResponsiveImage extends \ContentElement
 
 		if(TL_MODE == 'FE')
 		{
-			$this->Template->singleSRC = 'system/modules/responsive_images/img/placeholder.jpg';
-			$this->Template->src       = 'system/modules/responsive_images/img/placeholder.jpg';
+			$this->Template->singleSRC = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
+			$this->Template->src       = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
 		}
 
         if(($this->img_use_css_background || $this->responsiveImageFullWidth) AND TL_MODE == 'FE')
@@ -168,14 +168,14 @@ class ContentResponsiveImage extends \ContentElement
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
-            $cachePath = TL_ROOT.'/system/modules/responsive_images/cache/';
+            $cachePath = TL_ROOT.'/web/bundles/doublesparkresponsiveimages/cache/';
 
             if(!file_exists($cachePath.$cacheID.'.css'))
             {
                 file_put_contents($cachePath.$cacheID.'.css',$css);
             }
 
-            $GLOBALS['TL_CSS'][] = '/system/modules/responsive_images/cache/'.$cacheID.'.css||static';
+            $GLOBALS['TL_CSS'][] = '/bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css||static';
         }
 
 	}
