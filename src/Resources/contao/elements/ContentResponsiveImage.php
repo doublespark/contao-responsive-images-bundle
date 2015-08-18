@@ -162,9 +162,11 @@ class ContentResponsiveImage extends \ContentElement
             $objCSS->large_height = $arrLarge[1];
 
 			// Work around to stop output of HTML template tags in debug mode
+			$debugMode = \Config::get('debugMode');
+
 			\Config::set('debugMode',false);
             $css = $objCSS->parse();
-			\Config::set('debugMode',true);
+			\Config::set('debugMode',$debugMode);
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
@@ -175,7 +177,7 @@ class ContentResponsiveImage extends \ContentElement
                 file_put_contents($cachePath.$cacheID.'.css',$css);
             }
 
-            $GLOBALS['TL_CSS'][] = '/bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css||static';
+            $GLOBALS['TL_CSS'][] = 'bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css||static';
         }
 
 	}
