@@ -2,12 +2,7 @@
 
 /**
  * Contao Open Source CMS
- *
- * Copyright (c) 2005-2014 Leo Feyer
- *
  * @package Responsive_images
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
 
@@ -17,7 +12,7 @@
 ClassLoader::addClasses(array
 (
 	// Elements
-	'Contao\ContentResponsiveImage' => 'system/modules/responsive_images/elements/ContentResponsiveImage.php',
+	'Contao\ContentResponsiveImage' => 'vendor/doublespark/contao-responsive-images-bundle/src/Resources/contao/elements/ContentResponsiveImage.php'
 ));
 
 
@@ -26,6 +21,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'ce_responsive_image'  => 'system/modules/responsive_images/templates',
-	'css_responsive_image' => 'system/modules/responsive_images/templates',
+	'ce_responsive_image'  => 'vendor/doublespark/contao-responsive-images-bundle/src/Resources/contao/templates',
+	'css_responsive_image' => 'vendor/doublespark/contao-responsive-images-bundle/src/Resources/contao/templates',
 ));
