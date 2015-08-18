@@ -13,7 +13,8 @@ $GLOBALS['TL_LANG']['tl_content']['imagesize_tablet']  = array('Tablet', 'Betwee
 $GLOBALS['TL_LANG']['tl_content']['imagesize_desktop'] = array('Desktop', 'Between 768px and 1400px. Set the image size to be served to desktops.');
 $GLOBALS['TL_LANG']['tl_content']['imagesize_large']   = array('Large', 'Larger than 1400px. Set the image size to be served to large screens.');
 
-$GLOBALS['TL_LANG']['tl_content']['img_use_css_background'] = array('CSS Background', 'This will allow for fixed height images that do not scale.');
+$GLOBALS['TL_LANG']['tl_content']['img_use_css_background']   = array('CSS Background', 'This will allow for fixed height images that do not scale.');
+$GLOBALS['TL_LANG']['tl_content']['responsiveImageFullWidth'] = array('Display full width', 'Show this image at 100% width with a fixed height.');
 
 $GLOBALS['TL_LANG']['tl_content']['responsive_legend'] = 'Responsive sizes';
 

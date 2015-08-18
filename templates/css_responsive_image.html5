@@ -1,16 +1,25 @@
 #<?php echo $this->imgID; ?> {
     display:block;
     overflow:hidden;
-    background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->mobile_url; ?>') no-repeat center center;
+    background-image:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->mobile_url; ?>');
+    background-repeat:no-repeat;
+    background-position:center center;
+    <?php if(!$this->fullWidth): ?>
     max-width:<?php echo $this->mobile_width; ?>px;
+    <?php else: ?>
+    width:100%;
+    background-size: cover;
+    <?php endif; ?>
     height:<?php echo $this->mobile_height; ?>px;
 }
 
 @media screen and (min-width:700px){
 
     #<?php echo $this->imgID; ?> {
-        background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->tablet_url; ?>') no-repeat center center;
+        background-image:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->tablet_url; ?>');
+        <?php if(!$this->fullWidth): ?>
         max-width:<?php echo $this->tablet_width; ?>px;
+        <?php endif; ?>
         height:<?php echo $this->tablet_height; ?>px;
     }
 
@@ -19,8 +28,10 @@
 @media screen and (min-width:768px){
 
     #<?php echo $this->imgID; ?> {
-        background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->desktop_url; ?>') no-repeat center center;
+        background-image:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->desktop_url; ?>');
+        <?php if(!$this->fullWidth): ?>
         max-width:<?php echo $this->desktop_width; ?>px;
+        <?php endif; ?>
         height:<?php echo $this->desktop_height; ?>px;
     }
 
@@ -29,8 +40,10 @@
 @media screen and (min-width:1400px){
 
     #<?php echo $this->imgID; ?> {
-        background:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->large_url; ?>') no-repeat center center;
+        background-image:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->large_url; ?>');
+        <?php if(!$this->fullWidth): ?>
         max-width:<?php echo $this->large_width; ?>px;
+        <?php endif; ?>
         height:<?php echo $this->large_height; ?>px;
     }
 

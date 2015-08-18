@@ -1,0 +1,4 @@
+.DS_STORE
+error_log
+cache/*.html
+cache/*.css

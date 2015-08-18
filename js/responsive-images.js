@@ -33,14 +33,14 @@ function updateImages(images, window_width, retina)
         // Get the current size
         var currentSize = img.getAttribute('data-size');
 
-        if(window_width <= 640 && currentSize != 'mobile')
+        if(window_width <= 700 && currentSize != 'mobile')
         {
             img.setAttribute('src', img.getAttribute('data-mobile'));
             img.setAttribute('data-size', 'mobile');
             return;
         }
 
-        if(window_width <= 768 && window_width > 640 && currentSize != 'tablet')
+        if(window_width <= 768 && window_width > 700 && currentSize != 'tablet')
         {
             img.setAttribute('src', img.getAttribute('data-tablet'));
             img.setAttribute('data-size', 'tablet');

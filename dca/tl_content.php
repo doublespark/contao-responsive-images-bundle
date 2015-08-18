@@ -10,7 +10,7 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},singleSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption,img_use_css_background;{responsive_legend},imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},singleSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption,img_use_css_background,responsiveImageFullWidth;{responsive_legend},imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 // Mobile -------------------------- //
 
@@ -130,4 +130,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['img_use_css_background'] = array(
     'inputType'               => 'checkbox',
     'eval'                    => array('mandatory'=>false),
     'sql'                     => "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['responsiveImageFullWidth'] = array(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['responsiveImageFullWidth'],
+	'exclude'                 => true,
+	'search'                  => true,
+	'inputType'               => 'checkbox',
+	'eval'                    => array('mandatory'=>false),
+	'sql'                     => "char(1) NOT NULL default ''"
 );

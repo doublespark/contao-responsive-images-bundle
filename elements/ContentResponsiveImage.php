@@ -133,7 +133,7 @@ class ContentResponsiveImage extends \ContentElement
 			$this->Template->src       = 'system/modules/responsive_images/img/placeholder.jpg';
 		}
 
-        if($this->img_use_css_background AND TL_MODE == 'FE')
+        if(($this->img_use_css_background || $this->responsiveImageFullWidth) AND TL_MODE == 'FE')
         {
             $imageID = 'resImage_'.$this->id;
 
@@ -142,6 +142,8 @@ class ContentResponsiveImage extends \ContentElement
 
             $objCSS              = new \FrontendTemplate('css_responsive_image');
             $objCSS->imgID       = $imageID;
+
+			$objCSS->fullWidth     = $this->responsiveImageFullWidth;
 
             $objCSS->mobile_url    = $this->Template->mobile_url;
             $objCSS->mobile_width  = $arrMobile[0];
@@ -159,18 +161,21 @@ class ContentResponsiveImage extends \ContentElement
             $objCSS->large_width  = $arrLarge[0];
             $objCSS->large_height = $arrLarge[1];
 
+			// Work around to stop output of HTML template tags in debug mode
+			\Config::set('debugMode',false);
             $css = $objCSS->parse();
+			\Config::set('debugMode',true);
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
-            $cachePath = TL_ROOT.'/system/cache/html/';
+            $cachePath = TL_ROOT.'/system/modules/responsive_images/cache/';
 
             if(!file_exists($cachePath.$cacheID.'.css'))
             {
                 file_put_contents($cachePath.$cacheID.'.css',$css);
             }
 
-            $GLOBALS['TL_CSS'][] = '/system/cache/html/'.$cacheID.'.css||static';
+            $GLOBALS['TL_CSS'][] = '/system/modules/responsive_images/cache/'.$cacheID.'.css||static';
         }
 
 	}
