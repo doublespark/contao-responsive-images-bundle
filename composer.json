@@ -1,5 +1,5 @@
 {
-  "name": "doublespark/responsive-images-bundle",
+  "name": "doublespark/contao-responsive-images-bundle",
   "type": "symfony-bundle",
   "description": "Contao 4 responsive images",
   "license": "LGPL-3.0+",
