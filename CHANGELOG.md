@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.5 (2015-08-18)
+--------------------------
+
+### Fixed
+Fix bug where debug mode was being forced on
+
 Version 1.0.4 (2015-08-18)
 --------------------------
 
