@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.6 (2015-08-18)
+--------------------------
+
+### Fixed
+Make sure JS is loaded for non-css background images
+
 Version 1.0.5 (2015-08-18)
 --------------------------
 
