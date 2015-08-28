@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.7 (2015-08-18)
+--------------------------
+
+### Feature
+Implement all contao cropping modes
+
 Version 1.0.6 (2015-08-18)
 --------------------------
 
