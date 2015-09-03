@@ -177,7 +177,7 @@ class ContentResponsiveImage extends \ContentElement
                 file_put_contents($cachePath.$cacheID.'.css',$css);
             }
 
-            $GLOBALS['TL_CSS'][] = 'web/bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css';
+            $GLOBALS['TL_CSS'][] = 'bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css';
         }       
 
 	}
