@@ -6,6 +6,8 @@ Version 1.0.8 (2015-03-09)
 
 ### Fixed
 Used named JS file to prevent duplication
+Load a single JS to the minified JS to prevent multiple minified JS files
+Don't include CSS in minifyed CSS to prevent multiple minifyed CSS file
 
 Version 1.0.7 (2015-08-18)
 --------------------------

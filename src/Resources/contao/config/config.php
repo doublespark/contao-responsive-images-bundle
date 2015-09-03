@@ -33,7 +33,7 @@ define('RESPONSIVE_IMAGES_VERSION', '1.0.7');
  */
 if(TL_MODE == 'FE')
 {
-    $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/responsive_images/js/responsive-images.js|static';
+	$GLOBALS['TL_JAVASCRIPT']['responsive_images'] = 'web/bundles/doublesparkresponsiveimages/js/responsive-images.js|static';
 }
 
 // Add responsive image element
