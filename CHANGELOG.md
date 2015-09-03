@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.8 (2015-03-09)
+--------------------------
+
+### Fixed
+Used named JS file to prevent duplication
+
 Version 1.0.7 (2015-08-18)
 --------------------------
 

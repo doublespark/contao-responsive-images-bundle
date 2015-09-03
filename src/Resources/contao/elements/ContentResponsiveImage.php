@@ -181,7 +181,7 @@ class ContentResponsiveImage extends \ContentElement
         }
         else
 		{
-			$GLOBALS['TL_JAVASCRIPT'][] = 'web/bundles/doublesparkresponsiveimages/js/responsive-images.js|static';
+			$GLOBALS['TL_JAVASCRIPT']['responsive_images'] = 'web/bundles/doublesparkresponsiveimages/js/responsive-images.js|static';
 		}
 
 	}
