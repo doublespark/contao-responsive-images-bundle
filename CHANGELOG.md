@@ -1,7 +1,7 @@
 Responsive images change log
 =================
 
-Version 1.0.8 (2015-03-09)
+Version 1.0.8 (2015-16-09)
 --------------------------
 
 ### Fixed
