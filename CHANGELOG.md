@@ -1,7 +1,13 @@
 Responsive images change log
 =================
 
-Version 1.0.8 (2015-16-09)
+Version 1.0.9 (2016-03-01)
+--------------------------
+
+### Feature
+Allow image breakpoints to be overridden with JS
+
+Version 1.0.8 (2015-09-16)
 --------------------------
 
 ### Fixed
