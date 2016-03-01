@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.10 (2016-03-01)
+--------------------------
+
+### Fixed
+Allow breakpoints to be defined in config and apply to CSS images
+
 Version 1.0.9 (2016-03-01)
 --------------------------
 

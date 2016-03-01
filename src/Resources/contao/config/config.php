@@ -26,7 +26,7 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
-define('RESPONSIVE_IMAGES_VERSION', '1.0.9');
+define('RESPONSIVE_IMAGES_VERSION', '1.1.10');
 
 /**
  * Load JS

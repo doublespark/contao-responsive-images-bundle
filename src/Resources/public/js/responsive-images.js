@@ -1,14 +1,5 @@
 $(document).ready(function(){
 
-    // Allow override of breakpoints
-    if (typeof window.responsiveBreakPoints == 'undefined') {
-        window.responsiveBreakPoints = {
-            tablet: 700,
-            desktop: 768,
-            large: 1400
-        }
-    }
-
     // Get the window object
     var windowObj = $(window);
 
@@ -18,18 +9,18 @@ $(document).ready(function(){
     // Get the images
     var images = $('img.respond');
 
-    // Set the images on load
-    var w = windowObj.width();
-    updateImages(images, w, retina);
-
-    // Set the images on resize
-    windowObj.resize(function(){
-
+    if(images.length > 0)
+    {
+        // Set the images on load
         var w = windowObj.width();
-
         updateImages(images, w, retina);
 
-    });
+        // Set the images on resize
+        windowObj.resize(function(){
+            var w = windowObj.width();
+            updateImages(images, w, retina);
+        });
+    }
 });
 
 /**

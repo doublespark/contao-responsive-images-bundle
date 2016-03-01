@@ -12,9 +12,7 @@
     <?php endif; ?>
     height:<?php echo $this->mobile_height; ?>px;
 }
-
-@media screen and (min-width:700px){
-
+@media screen and (min-width:<?php echo $this->tabletBreakpoint; ?>px){
     #<?php echo $this->imgID; ?> {
         background-image:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->tablet_url; ?>');
         <?php if(!$this->fullWidth): ?>
@@ -22,11 +20,8 @@
         <?php endif; ?>
         height:<?php echo $this->tablet_height; ?>px;
     }
-
 }
-
-@media screen and (min-width:768px){
-
+@media screen and (min-width:<?php echo $this->desktopBreakpoint; ?>px){
     #<?php echo $this->imgID; ?> {
         background-image:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->desktop_url; ?>');
         <?php if(!$this->fullWidth): ?>
@@ -34,11 +29,8 @@
         <?php endif; ?>
         height:<?php echo $this->desktop_height; ?>px;
     }
-
 }
-
-@media screen and (min-width:1400px){
-
+@media screen and (min-width:<?php echo $this->largeBreakpoint; ?>px){
     #<?php echo $this->imgID; ?> {
         background-image:url('http://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->large_url; ?>');
         <?php if(!$this->fullWidth): ?>
@@ -46,5 +38,4 @@
         <?php endif; ?>
         height:<?php echo $this->large_height; ?>px;
     }
-
 }

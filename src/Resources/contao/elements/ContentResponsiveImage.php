@@ -73,6 +73,25 @@ class ContentResponsiveImage extends \ContentElement
 	 */
 	protected function compile()
 	{
+		// Default breakpoints
+		$arrBreakPoints = array(
+			'tablet' => 700,
+			'desktop' => 980,
+			'large' => 1400
+		);
+
+		// Override breakpoints if they have been set in the config
+		foreach($arrBreakPoints as $k => $v)
+		{
+			if(isset($GLOBALS['TL_CONFIG']['RESPONSIVE_IMAGES'][$k]) AND $GLOBALS['TL_CONFIG']['RESPONSIVE_IMAGES'][$k] != '')
+			{
+				$arrBreakPoints[$k] = $GLOBALS['TL_CONFIG']['RESPONSIVE_IMAGES'][$k];
+			}
+		}
+
+		// Add JS breakpoints to head - used by the JS script
+		$GLOBALS['TL_HEAD']['responsiveImageBreakpoints'] = '<script type="text/javascript">window.responsiveBreakPoints={"tablet":'.$arrBreakPoints['tablet'].',"desktop":'.$arrBreakPoints['desktop'].',"large":'.$arrBreakPoints['large']."};</script>";
+
 		$this->addImageToTemplate($this->Template, $this->arrData);
 
 		$arrMobile  = unserialize($this->imagesize_mobile);
@@ -161,6 +180,10 @@ class ContentResponsiveImage extends \ContentElement
             $objCSS->large_width  = $arrLarge[0];
             $objCSS->large_height = $arrLarge[1];
 
+			$objCSS->tabletBreakpoint  = $arrBreakPoints['tablet'];
+			$objCSS->desktopBreakpoint = $arrBreakPoints['desktop'];
+			$objCSS->largeBreakpoint   = $arrBreakPoints['large'];
+
 			// Work around to stop output of HTML template tags in debug mode
 			$debugMode = \Config::get('debugMode');
 
@@ -178,8 +201,7 @@ class ContentResponsiveImage extends \ContentElement
             }
 
             $GLOBALS['TL_CSS'][] = 'bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css';
-        }       
-
+        }
 	}
 
 	/**
