@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+    // Allow override of breakpoints
+    if (typeof window.responsiveBreakPoints == 'undefined') {
+        window.responsiveBreakPoints = {
+            tablet: 700,
+            desktop: 768,
+            large: 1400
+        }
+    }
+
     // Get the window object
     var windowObj = $(window);
 
@@ -33,28 +42,28 @@ function updateImages(images, window_width, retina)
         // Get the current size
         var currentSize = img.getAttribute('data-size');
 
-        if(window_width <= 700 && currentSize != 'mobile')
+        if(window_width <= window.responsiveBreakPoints.tablet && currentSize != 'mobile')
         {
             img.setAttribute('src', img.getAttribute('data-mobile'));
             img.setAttribute('data-size', 'mobile');
             return;
         }
 
-        if(window_width <= 768 && window_width > 700 && currentSize != 'tablet')
+        if(window_width <= window.responsiveBreakPoints.desktop && window_width > window.responsiveBreakPoints.tablet && currentSize != 'tablet')
         {
             img.setAttribute('src', img.getAttribute('data-tablet'));
             img.setAttribute('data-size', 'tablet');
             return;
         }
 
-        if(window_width > 768 && window_width < 1400 && currentSize != 'desktop')
+        if(window_width > window.responsiveBreakPoints.desktop && window_width < window.responsiveBreakPoints.large && currentSize != 'desktop')
         {
             img.setAttribute('src', img.getAttribute('data-desktop'));
             img.setAttribute('data-size', 'desktop');
             return;
         }
 
-        if(window_width > 1400 && currentSize != 'large')
+        if(window_width > window.responsiveBreakPoints.large && currentSize != 'large')
         {
             img.setAttribute('src', img.getAttribute('data-large'));
             img.setAttribute('data-size', 'large');
