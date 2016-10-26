@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.11 (2016-10-26)
+--------------------------
+
+### Changed
+Make JS breakpoints available at all times, even if no module is present on page
+
 Version 1.0.10 (2016-03-01)
 --------------------------
 
