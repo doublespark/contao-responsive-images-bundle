@@ -73,6 +73,21 @@ class ContentResponsiveImage extends \ContentElement
 	 */
 	protected function compile()
 	{
+		// Default breakpoints
+		$arrBreakPoints = array(
+			'tablet' => 700,
+			'desktop' => 980,
+			'large' => 1400
+		);
+
+		// Override breakpoints if they have been set in the config
+		foreach($arrBreakPoints as $k => $v)
+		{
+			if(isset($GLOBALS['TL_CONFIG']['RESPONSIVE_IMAGES'][$k]) AND $GLOBALS['TL_CONFIG']['RESPONSIVE_IMAGES'][$k] != '')
+			{
+				$arrBreakPoints[$k] = $GLOBALS['TL_CONFIG']['RESPONSIVE_IMAGES'][$k];
+			}
+		}
 
 		$this->addImageToTemplate($this->Template, $this->arrData);
 
