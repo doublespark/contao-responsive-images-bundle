@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.12 (2016-11-03)
+--------------------------
+
+### Fixed
+Make sure breakpoints are available in the module
+
 Version 1.0.11 (2016-10-26)
 --------------------------
 
