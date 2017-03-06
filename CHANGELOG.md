@@ -1,6 +1,16 @@
 Responsive images change log
 =================
 
+Version 1.0.14 (2017-02-28)
+--------------------------
+
+## Updated
+Remove symfony dependency to work with latest version of Contao
+
+### Fixed
+Make sure breakpoints are available in the module
+
+
 Version 1.0.13 (2017-02-28)
 --------------------------
 
