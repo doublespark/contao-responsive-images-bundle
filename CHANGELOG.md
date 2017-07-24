@@ -1,6 +1,13 @@
 Responsive images change log
 =================
 
+Version 1.0.15 (2017-07-24)
+--------------------------
+
+### Fixed
+Clear form fields on tl_content
+Remove reference to tl_content class
+
 Version 1.0.14 (2017-02-28)
 --------------------------
 
