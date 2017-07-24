@@ -20,11 +20,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mobileSRC'] = array
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
-	'sql'                     => "binary(16) NULL",
-	'save_callback' => array
-	(
-		array('tl_content', 'storeFileMetaInformation')
-	)
+	'sql'                     => "binary(16) NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_mobile'] = array(
@@ -45,11 +41,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['tabletSRC'] = array
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
-	'sql'                     => "binary(16) NULL",
-	'save_callback' => array
-	(
-		array('tl_content', 'storeFileMetaInformation')
-	)
+	'sql'                     => "binary(16) NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_tablet'] = array(
@@ -70,11 +62,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['desktopSRC'] = array
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
-	'sql'                     => "binary(16) NULL",
-	'save_callback' => array
-	(
-		array('tl_content', 'storeFileMetaInformation')
-	)
+	'sql'                     => "binary(16) NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_desktop'] = array(
@@ -95,11 +83,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['largeSRC'] = array
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
-	'sql'                     => "binary(16) NULL",
-	'save_callback' => array
-	(
-		array('tl_content', 'storeFileMetaInformation')
-	)
+	'sql'                     => "binary(16) NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_large'] = array(
