@@ -29,7 +29,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_mobile'] = array(
 	'inputType'               => 'imageSize',
 	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true),
+	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
@@ -50,7 +50,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_tablet'] = array(
 	'inputType'               => 'imageSize',
 	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true),
+	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
@@ -71,7 +71,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_desktop'] = array(
 	'inputType'               => 'imageSize',
 	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true),
+	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
@@ -92,7 +92,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_large'] = array(
 	'inputType'               => 'imageSize',
 	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true),
+	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['image_text'] = array(
 	'exclude'                 => true,
 	'search'                  => true,
 	'inputType'               => 'textarea',
-	'eval'                    => array('mandatory'=>false, 'rte'=>'tinyMCE', 'helpwizard'=>true),
+	'eval'                    => array('mandatory'=>false, 'rte'=>'tinyMCE', 'helpwizard'=>true, 'tl_class'=>'clr'),
 	'sql'                     => "mediumtext NULL"
 );
 
@@ -112,7 +112,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['img_use_css_background'] = array(
     'exclude'                 => true,
     'search'                  => true,
     'inputType'               => 'checkbox',
-    'eval'                    => array('mandatory'=>false),
+    'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr'),
     'sql'                     => "char(1) NOT NULL default ''"
 );
 
@@ -121,6 +121,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['responsiveImageFullWidth'] = array(
 	'exclude'                 => true,
 	'search'                  => true,
 	'inputType'               => 'checkbox',
-	'eval'                    => array('mandatory'=>false),
+	'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
