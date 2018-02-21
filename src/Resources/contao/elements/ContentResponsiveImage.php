@@ -197,6 +197,12 @@ class ContentResponsiveImage extends \ContentElement
                 file_put_contents($cachePath.$cacheID.'.css',$css);
             }
 
+            // Add OG tag for image
+            $protocol = \Environment::get('ssl') ? 'https://' : 'http://';
+            $imgURL = $protocol.$_SERVER['HTTP_HOST'].'/'.$this->singleSRC;
+            $GLOBALS['TL_HEAD'][] = '<meta property="og:image" content="'.$imgURL.'"/>';
+
+
             $GLOBALS['TL_CSS'][] = 'bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css';
         }
 	}
