@@ -1,6 +1,13 @@
 Responsive images change log
 =================
 
+Version 1.0.16 (2018-02-21)
+--------------------------
+
+### Updated
+Added support for og tags
+
+
 Version 1.0.15 (2017-07-24)
 --------------------------
 
