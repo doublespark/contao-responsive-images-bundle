@@ -1,6 +1,13 @@
 Responsive images change log
 =================
 
+Version 1.0.17 (2019-02-08)
+--------------------------
+
+### Updated
+Added support for contao manager
+
+
 Version 1.0.16 (2018-02-21)
 --------------------------
 

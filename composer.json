@@ -1,8 +1,8 @@
 {
   "name": "doublespark/contao-responsive-images-bundle",
-  "type": "symfony-bundle",
+  "type": "contao-bundle",
   "description": "Contao 4 responsive images",
-  "license": "LGPL-3.0+",
+  "license": "MIT",
   "authors": [
     {
       "name": "Jamie Devine",
@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "php": ">=5.4.0",
-    "contao/core-bundle": "~4.0"
+    "php": ">=7.1.0",
+    "contao/core-bundle": "^4.2"
   },
   "conflict": {
     "contao/core": "*"
@@ -20,5 +20,8 @@
     "psr-4": {
       "Doublespark\\ResponsiveImagesBundle\\": "src/"
     }
+  },
+  "extra": {
+    "contao-manager-plugin": "Doublespark\\ResponsiveImagesBundle\\ContaoManager\\Plugin"
   }
 }
