@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.18 (2019-05-10)
+--------------------------
+
+### Updated
+Added support for global image size presets
+
 Version 1.0.17 (2019-02-08)
 --------------------------
 

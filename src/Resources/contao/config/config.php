@@ -26,7 +26,7 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
 
-define('RESPONSIVE_IMAGES_VERSION', '1.0.15');
+define('RESPONSIVE_IMAGES_VERSION', '1.0.18');
 
 /**
  * Models
