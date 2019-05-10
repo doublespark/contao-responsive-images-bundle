@@ -15,6 +15,7 @@
  * Run in a custom namespace, so the class can be replaced
  */
 namespace Contao;
+use Doublespark\ResponsiveImagesBundle\Models\DsImageSizesModel;
 
 
 /**
@@ -91,10 +92,29 @@ class ContentResponsiveImage extends \ContentElement
 
 		$this->addImageToTemplate($this->Template, $this->arrData);
 
-		$arrMobile  = unserialize($this->imagesize_mobile);
-		$arrTablet  = unserialize($this->imagesize_tablet);
-		$arrDesktop = unserialize($this->imagesize_desktop);
-		$arrLarge   = unserialize($this->imagesize_large);
+        $arrMobile  = unserialize($this->imagesize_mobile);
+        $arrTablet  = unserialize($this->imagesize_tablet);
+        $arrDesktop = unserialize($this->imagesize_desktop);
+        $arrLarge   = unserialize($this->imagesize_large);
+
+        $useCssBackground = $this->img_use_css_background;
+        $fullWidth        = $this->responsiveImageFullWidth;
+
+		if(!$this->img_use_custom_sizes && !empty($this->img_size_preset))
+        {
+            $objPreset = DsImageSizesModel::findByPk($this->img_size_preset);
+
+            if($objPreset)
+            {
+                $arrMobile  = unserialize($objPreset->imagesize_mobile);
+                $arrTablet  = unserialize($objPreset->imagesize_tablet);
+                $arrDesktop = unserialize($objPreset->imagesize_desktop);
+                $arrLarge   = unserialize($objPreset->imagesize_large);
+
+                $useCssBackground = $objPreset->img_use_css_background;
+                $fullWidth        = $objPreset->responsiveImageFullWidth;
+            }
+        }
 
 		// Default to the singleSRC image
 		$mobileSRC  = $this->singleSRC;
@@ -149,7 +169,7 @@ class ContentResponsiveImage extends \ContentElement
 			$this->Template->src       = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
 		}
 
-        if(($this->img_use_css_background || $this->responsiveImageFullWidth) AND TL_MODE == 'FE')
+        if(($useCssBackground || $fullWidth) AND TL_MODE == 'FE')
         {
             $imageID = 'resImage_'.$this->id;
 

@@ -29,6 +29,11 @@
 define('RESPONSIVE_IMAGES_VERSION', '1.0.15');
 
 /**
+ * Models
+ */
+$GLOBALS['TL_MODELS']['tl_ds_image_sizes'] = 'Doublespark\ResponsiveImagesBundle\Models\DsImageSizesModel';
+
+/**
  * Load JS
  */
 if(TL_MODE == 'FE')
@@ -57,3 +62,15 @@ if(TL_MODE == 'FE')
 
 // Add responsive image element
 $GLOBALS['TL_CTE']['media']['responsive_image'] = 'ContentResponsiveImage';
+
+/**
+ * BACK END MODULES
+ */
+
+array_insert($GLOBALS['BE_MOD']['system'], 4, array
+(
+    'tl_ds_image_sizes' => array
+    (
+        'tables' => array('tl_ds_image_sizes')
+    )
+));

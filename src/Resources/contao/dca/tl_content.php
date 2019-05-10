@@ -10,7 +10,12 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},singleSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption,img_use_css_background,responsiveImageFullWidth;{responsive_legend},imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},singleSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption;{responsive_legend},img_size_preset,img_use_custom_sizes;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+
+$GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'img_use_custom_sizes';
+
+// Subpalettes
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['img_use_custom_sizes'] = 'imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large,img_use_css_background,responsiveImageFullWidth';
 
 // Mobile -------------------------- //
 
@@ -123,4 +128,19 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['responsiveImageFullWidth'] = array(
 	'inputType'               => 'checkbox',
 	'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr'),
 	'sql'                     => "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['img_use_custom_sizes'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['img_use_custom_sizes'],
+    'inputType'               => 'checkbox',
+    'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr', 'submitOnChange'=>true),
+    'sql'                     => "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['img_size_preset'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['img_size_preset'],
+    'inputType'               => 'select',
+    'foreignKey'              => 'tl_ds_image_sizes.title',
+    'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr', 'includeBlankOption' => true),
+    'sql'                     => "int(10) unsigned NOT NULL default '0'"
 );

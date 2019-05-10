@@ -16,5 +16,8 @@ $GLOBALS['TL_LANG']['tl_content']['imagesize_large']   = array('Large', 'Larger 
 $GLOBALS['TL_LANG']['tl_content']['img_use_css_background']   = array('CSS Background', 'This will allow for fixed height images that do not scale.');
 $GLOBALS['TL_LANG']['tl_content']['responsiveImageFullWidth'] = array('Display full width', 'Show this image at 100% width with a fixed height.');
 
+$GLOBALS['TL_LANG']['tl_content']['img_size_preset']      = array('Size preset', 'Select a size preset to apply to this element.');
+$GLOBALS['TL_LANG']['tl_content']['img_use_custom_sizes'] = array('Use custom sizes', 'Use custom size settings for this element.');
+
 $GLOBALS['TL_LANG']['tl_content']['responsive_legend'] = 'Responsive sizes';
 
