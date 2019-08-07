@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.19 (2019-08-07)
+--------------------------
+
+### Updated
+Pull metadata from file manager
+
 Version 1.0.18 (2019-05-10)
 --------------------------
 
