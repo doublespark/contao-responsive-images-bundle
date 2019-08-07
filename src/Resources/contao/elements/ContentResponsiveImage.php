@@ -35,6 +35,10 @@ class ContentResponsiveImage extends \ContentElement
 	 */
 	protected $strTemplate = 'ce_responsive_image';
 
+    /**
+     * @var FilesModel
+     */
+	protected $oblFile;
 
 	/**
 	 * Return if the image does not exist
@@ -47,9 +51,9 @@ class ContentResponsiveImage extends \ContentElement
 			return '';
 		}
 
-		$objFile = \FilesModel::findByUuid($this->singleSRC);
+		$this->objFile = \FilesModel::findByUuid($this->singleSRC);
 
-		if ($objFile === null)
+		if ($this->objFile === null)
 		{
 			if (!\Validator::isUuid($this->singleSRC))
 			{
@@ -59,12 +63,12 @@ class ContentResponsiveImage extends \ContentElement
 			return '';
 		}
 
-		if ($objFile === null || !is_file(TL_ROOT . '/' . $objFile->path))
+		if ($this->objFile === null || !is_file(TL_ROOT . '/' . $this->objFile->path))
 		{
 			return '';
 		}
 
-		$this->singleSRC = $objFile->path;
+		$this->singleSRC = $this->objFile->path;
 		return parent::generate();
 	}
 
@@ -90,7 +94,31 @@ class ContentResponsiveImage extends \ContentElement
 			}
 		}
 
+		// Use meta data from the file manager if it exists
+		if($this->objFile->meta)
+        {
+            $arrMeta = unserialize($this->objFile->meta);
+
+            if(isset($arrMeta['en']))
+            {
+                foreach($arrMeta['en'] as $field => $value)
+                {
+                    if(empty($value))
+                    {
+                        continue;
+                    }
+
+                    if(isset($this->arrData[$field]))
+                    {
+                        $this->arrData[$field] = $value;
+                    }
+                }
+            }
+        }
+
 		$this->addImageToTemplate($this->Template, $this->arrData);
+
+		$this->Template->alt = $this->arrData['alt'];
 
         $arrMobile  = unserialize($this->imagesize_mobile);
         $arrTablet  = unserialize($this->imagesize_tablet);
