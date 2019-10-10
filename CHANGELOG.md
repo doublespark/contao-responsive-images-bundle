@@ -1,6 +1,14 @@
 Responsive images change log
 =================
 
+Version 1.0.20 (2019-10-10)
+--------------------------
+
+### Updated
+Move content element to Element namespace
+Update namespace name
+Use new image factory
+
 Version 1.0.19 (2019-08-07)
 --------------------------
 
