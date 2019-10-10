@@ -1,20 +1,13 @@
 <?php
 
-/**
- * Contao Open Source CMS
- *
- * Copyright (c) 2005-2013 Leo Feyer
- *
- * @package Core
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
- */
+namespace Doublespark\ResponsiveImages\Elements;
 
-
-/**
- * Run in a custom namespace, so the class can be replaced
- */
-namespace Contao;
+use Contao\Config;
+use Contao\ContentElement;
+use Contao\Environment;
+use Contao\FilesModel;
+use Contao\System;
+use Contao\Validator;
 use Doublespark\ResponsiveImages\Models\DsImageSizesModel;
 
 
@@ -26,7 +19,7 @@ use Doublespark\ResponsiveImages\Models\DsImageSizesModel;
  * @author     Jamie Devine
  * @package    Core
  */
-class ContentResponsiveImage extends \ContentElement
+class ContentResponsiveImage extends ContentElement
 {
 
 	/**
@@ -38,7 +31,7 @@ class ContentResponsiveImage extends \ContentElement
     /**
      * @var FilesModel
      */
-	protected $oblFile;
+	protected $objFile;
 
 	/**
 	 * Return if the image does not exist
@@ -51,11 +44,11 @@ class ContentResponsiveImage extends \ContentElement
 			return '';
 		}
 
-		$this->objFile = \FilesModel::findByUuid($this->singleSRC);
+		$this->objFile = FilesModel::findByUuid($this->singleSRC);
 
 		if ($this->objFile === null)
 		{
-			if (!\Validator::isUuid($this->singleSRC))
+			if (!Validator::isUuid($this->singleSRC))
 			{
 				return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
 			}
@@ -230,11 +223,11 @@ class ContentResponsiveImage extends \ContentElement
 			$objCSS->largeBreakpoint   = $arrBreakPoints['large'];
 
 			// Work around to stop output of HTML template tags in debug mode
-			$debugMode = \Config::get('debugMode');
+			$debugMode = Config::get('debugMode');
 
-			\Config::set('debugMode',false);
+            Config::set('debugMode',false);
             $css = $objCSS->parse();
-			\Config::set('debugMode',$debugMode);
+            Config::set('debugMode',$debugMode);
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
@@ -246,7 +239,7 @@ class ContentResponsiveImage extends \ContentElement
             }
 
             // Add OG tag for image
-            $protocol = \Environment::get('ssl') ? 'https://' : 'http://';
+            $protocol = Environment::get('ssl') ? 'https://' : 'http://';
             $imgURL = $protocol.$_SERVER['HTTP_HOST'].'/'.$this->singleSRC;
             $GLOBALS['TL_HEAD'][] = '<meta property="og:image" content="'.$imgURL.'"/>';
 
@@ -257,15 +250,18 @@ class ContentResponsiveImage extends \ContentElement
 
 	/**
 	 * Generates a responsive URL
-	 * @param  [type] $src    [description]
-	 * @param  [type] $width  [description]
-	 * @param  [type] $height [description]
-	 * @param  [type] $mode   [description]
-	 * @return [type]         [description]
 	 */
 	protected function generateResponsiveURL($src, $width, $height, $mode=NULL)
 	{
-		return \Image::get($src, $width, $height, $mode);
+        $container = System::getContainer();
+        $rootDir   = $container->getParameter('kernel.project_dir');
+
+        $image = $container
+            ->get('contao.image.image_factory')
+            ->create($rootDir.'/'.$src, [$width, $height, $mode])
+            ->getUrl($rootDir);
+
+        return $image;
 	}
 
 	/**
@@ -275,7 +271,7 @@ class ContentResponsiveImage extends \ContentElement
 	 */
 	protected function fetchFilePath($uuid)
 	{
-		$objFile = \FilesModel::findByUuid($uuid);
+		$objFile = FilesModel::findByUuid($uuid);
 
 		if($objFile === null || !is_file(TL_ROOT . '/' . $objFile->path))
 		{
