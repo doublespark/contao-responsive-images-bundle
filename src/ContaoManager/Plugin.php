@@ -10,13 +10,13 @@ declare(strict_types=1);
  * @license LGPL-3.0-or-later
  */
 
-namespace Doublespark\ResponsiveImagesBundle\ContaoManager;
+namespace Doublespark\ResponsiveImages\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Doublespark\ResponsiveImagesBundle\DoublesparkResponsiveImagesBundle;
+use Doublespark\ResponsiveImages\DoublesparkResponsiveImagesBundle;
 
 class Plugin implements BundlePluginInterface
 {
@@ -26,9 +26,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create(DoublesparkResponsiveImagesBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class])
-                ->setReplace(['doublespark-responsive-images']),
+            BundleConfig::create(DoublesparkResponsiveImagesBundle::class)->setLoadAfter([ContaoCoreBundle::class])
         ];
     }
 }

@@ -15,7 +15,7 @@
  * Run in a custom namespace, so the class can be replaced
  */
 namespace Contao;
-use Doublespark\ResponsiveImagesBundle\Models\DsImageSizesModel;
+use Doublespark\ResponsiveImages\Models\DsImageSizesModel;
 
 
 /**

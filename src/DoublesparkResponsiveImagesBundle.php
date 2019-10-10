@@ -1,8 +1,6 @@
 <?php
-/*
- * This file is part of Contao.
- */
-namespace Doublespark\ResponsiveImagesBundle;
+
+namespace Doublespark\ResponsiveImages;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
