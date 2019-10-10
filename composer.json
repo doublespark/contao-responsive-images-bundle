@@ -11,17 +11,14 @@
   ],
   "require": {
     "php": ">=7.1.0",
-    "contao/core-bundle": "^4.2"
-  },
-  "conflict": {
-    "contao/core": "*"
+    "contao/core-bundle": "^4.7"
   },
   "autoload": {
     "psr-4": {
-      "Doublespark\\ResponsiveImagesBundle\\": "src/"
+      "Doublespark\\ResponsiveImages\\": "src/"
     }
   },
   "extra": {
-    "contao-manager-plugin": "Doublespark\\ResponsiveImagesBundle\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Doublespark\\ResponsiveImages\\ContaoManager\\Plugin"
   }
 }
