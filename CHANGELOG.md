@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.21 (2019-10-15)
+--------------------------
+
+### Fixed
+Fix full size image option when using presets
+
 Version 1.0.20 (2019-10-10)
 --------------------------
 
