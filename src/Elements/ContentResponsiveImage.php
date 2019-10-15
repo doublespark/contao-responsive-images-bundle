@@ -200,7 +200,7 @@ class ContentResponsiveImage extends ContentElement
             $objCSS              = new \FrontendTemplate('css_responsive_image');
             $objCSS->imgID       = $imageID;
 
-			$objCSS->fullWidth     = $this->responsiveImageFullWidth;
+            $objCSS->fullWidth     = $fullWidth;
 
             $objCSS->mobile_url    = $this->Template->mobile_url;
             $objCSS->mobile_width  = $arrMobile[0];
