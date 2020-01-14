@@ -1,6 +1,7 @@
 <?php
 
-namespace Doublespark\ResponsiveImages;
+namespace Doublespark\ContaoResponsiveImagesBundle;
+
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
@@ -8,6 +9,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author Jamie Devine
  */
-class DoublesparkResponsiveImagesBundle extends Bundle
+class DoublesparkContaoResponsiveImagesBundle extends Bundle
 {
 }
