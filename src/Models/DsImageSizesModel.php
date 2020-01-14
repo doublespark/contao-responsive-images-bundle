@@ -1,6 +1,6 @@
 <?php
 
-namespace Doublespark\ResponsiveImages\Models;
+namespace Doublespark\ContaoResponsiveImagesBundle\Models;
 
 use Contao\Model;
 

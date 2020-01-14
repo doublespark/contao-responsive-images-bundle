@@ -1,6 +1,6 @@
 <?php
 
-namespace Doublespark\ResponsiveImages\Elements;
+namespace Doublespark\ContaoResponsiveImagesBundle\Elements;
 
 use Contao\Config;
 use Contao\ContentElement;
@@ -8,7 +8,7 @@ use Contao\Environment;
 use Contao\FilesModel;
 use Contao\System;
 use Contao\Validator;
-use Doublespark\ResponsiveImages\Models\DsImageSizesModel;
+use Doublespark\ContaoResponsiveImagesBundle\Models\DsImageSizesModel;
 
 
 /**
