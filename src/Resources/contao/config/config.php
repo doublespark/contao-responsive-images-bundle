@@ -1,44 +1,18 @@
 <?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 
-/**
- * Contao Open Source CMS
- * Copyright (C) 2005-2010 Leo Feyer
- *
- * Formerly known as TYPOlight Open Source CMS.
- *
- * This program is free software: you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation, either
- * version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this program. If not, please visit the Free
- * Software Foundation website at <http://www.gnu.org/licenses/>.
- *
- * PHP version 5
- * @copyright  Doublespark 2013
- * @author     Jamie Devine <jamie.devine@doublespark.co.uk>
- * @license    http://opensource.org/licenses/lgpl-3.0.html
- */
-
 define('RESPONSIVE_IMAGES_VERSION', '1.0.21');
 
 /**
  * Models
  */
-$GLOBALS['TL_MODELS']['tl_ds_image_sizes'] = 'Doublespark\ResponsiveImages\Models\DsImageSizesModel';
+$GLOBALS['TL_MODELS']['tl_ds_image_sizes'] = 'Doublespark\ContaoResponsiveImagesBundle\Models\DsImageSizesModel';
 
 /**
  * Load JS
  */
 if(TL_MODE == 'FE')
 {
-	$GLOBALS['TL_JAVASCRIPT']['responsive_images'] = 'web/bundles/doublesparkresponsiveimages/js/responsive-images.js|static';
+	$GLOBALS['TL_JAVASCRIPT']['responsive_images'] = 'web/bundles/doublesparkcontaoresponsiveimagesbundle/js/responsive-images.js|static';
 
 	// Default breakpoints
 	$arrBreakPoints = array(
@@ -61,7 +35,7 @@ if(TL_MODE == 'FE')
 }
 
 // Add responsive image element
-$GLOBALS['TL_CTE']['media']['responsive_image'] = 'Doublespark\ResponsiveImages\Elements\ContentResponsiveImage';
+$GLOBALS['TL_CTE']['media']['responsive_image'] = 'Doublespark\ContaoResponsiveImagesBundle\Elements\ContentResponsiveImage';
 
 /**
  * BACK END MODULES
