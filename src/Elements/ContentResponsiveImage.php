@@ -6,6 +6,7 @@ use Contao\Config;
 use Contao\ContentElement;
 use Contao\Environment;
 use Contao\FilesModel;
+use Contao\ContentModel;
 use Contao\System;
 use Contao\Validator;
 use Doublespark\ResponsiveImages\Models\DsImageSizesModel;
@@ -41,7 +42,20 @@ class ContentResponsiveImage extends ContentElement
 	{
 		if($this->defaultSRC == '')
 		{
-			return '';
+			if(!empty($this->singleSRC))
+			{
+				 $this->defaultSRC = $this->singleSRC;
+
+				 // For backwards compatibility, copy singleSRC to defaultSRC
+				 $objContent = ContentModel::findByPk($this->id);
+				 $objContent->defaultSRC = $objContent->singleSRC;
+				 $objContent->singleSRC  = '';
+				 $objContent->save();
+			}
+			else
+			{
+					return '';
+			}
 		}
 
 		$this->objFile = FilesModel::findByUuid($this->defaultSRC);
