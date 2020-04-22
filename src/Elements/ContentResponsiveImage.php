@@ -6,6 +6,7 @@ use Contao\Config;
 use Contao\ContentElement;
 use Contao\Environment;
 use Contao\FilesModel;
+use Contao\ContentModel;
 use Contao\System;
 use Contao\Validator;
 use Doublespark\ContaoResponsiveImagesBundle\Models\DsImageSizesModel;
@@ -39,16 +40,29 @@ class ContentResponsiveImage extends ContentElement
 	 */
 	public function generate()
 	{
-		if($this->singleSRC == '')
+		if($this->defaultSRC == '')
 		{
-			return '';
+			if(!empty($this->singleSRC))
+			{
+				 $this->defaultSRC = $this->singleSRC;
+
+				 // For backwards compatibility, copy singleSRC to defaultSRC
+				 $objContent = ContentModel::findByPk($this->id);
+				 $objContent->defaultSRC = $objContent->singleSRC;
+				 $objContent->singleSRC  = '';
+				 $objContent->save();
+			}
+			else
+			{
+					return '';
+			}
 		}
 
-		$this->objFile = FilesModel::findByUuid($this->singleSRC);
+		$this->objFile = FilesModel::findByUuid($this->defaultSRC);
 
 		if ($this->objFile === null)
 		{
-			if (!Validator::isUuid($this->singleSRC))
+			if (!Validator::isUuid($this->defaultSRC))
 			{
 				return '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
 			}
@@ -61,7 +75,7 @@ class ContentResponsiveImage extends ContentElement
 			return '';
 		}
 
-		$this->singleSRC = $this->objFile->path;
+		$this->defaultSRC = $this->objFile->path;
 		return parent::generate();
 	}
 
@@ -137,11 +151,11 @@ class ContentResponsiveImage extends ContentElement
             }
         }
 
-		// Default to the singleSRC image
-		$mobileSRC  = $this->singleSRC;
-		$desktopSRC = $this->singleSRC;
-		$tabletSRC  = $this->singleSRC;
-		$largeSRC   = $this->singleSRC;
+		// Default to the defaultSRC image
+		$mobileSRC  = $this->defaultSRC;
+		$desktopSRC = $this->defaultSRC;
+		$tabletSRC  = $this->defaultSRC;
+		$largeSRC   = $this->defaultSRC;
 
 		// Get mobile SRC override if one is set
 		if($this->mobileSRC != '')
@@ -186,7 +200,7 @@ class ContentResponsiveImage extends ContentElement
 
 		if(TL_MODE == 'FE')
 		{
-			$this->Template->singleSRC = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
+			$this->Template->defaultSRC = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
 			$this->Template->src       = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
 		}
 
@@ -240,7 +254,7 @@ class ContentResponsiveImage extends ContentElement
 
             // Add OG tag for image
             $protocol = Environment::get('ssl') ? 'https://' : 'http://';
-            $imgURL = $protocol.$_SERVER['HTTP_HOST'].'/'.$this->singleSRC;
+            $imgURL = $protocol.$_SERVER['HTTP_HOST'].'/'.$this->defaultSRC;
             $GLOBALS['TL_HEAD'][] = '<meta property="og:image" content="'.$imgURL.'"/>';
 
 

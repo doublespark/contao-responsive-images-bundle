@@ -10,15 +10,24 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},singleSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption;{responsive_legend},img_size_preset,img_use_custom_sizes;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},defaultSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption;{responsive_legend},img_size_preset,img_use_custom_sizes;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'img_use_custom_sizes';
 
 // Subpalettes
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['img_use_custom_sizes'] = 'imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large,img_use_css_background,responsiveImageFullWidth';
 
-// Mobile -------------------------- //
+// Default
+$GLOBALS['TL_DCA']['tl_content']['fields']['defaultSRC'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['defaultSRC'],
+	'exclude'                 => true,
+	'inputType'               => 'fileTree',
+	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
+	'sql'                     => "binary(16) NULL"
+);
 
+// Mobile -------------------------- //
 $GLOBALS['TL_DCA']['tl_content']['fields']['mobileSRC'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['mobileSRC'],
@@ -60,7 +69,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_tablet'] = array(
 );
 
 // Desktop -------------------------- //
-
 $GLOBALS['TL_DCA']['tl_content']['fields']['desktopSRC'] = array
 (
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['desktopSRC'],

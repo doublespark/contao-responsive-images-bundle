@@ -3,6 +3,7 @@
 /**
  * Fields
  */
+ $GLOBALS['TL_LANG']['tl_content']['defaultSRC']  = array('Default image', 'Used as a fallback if device-specific image is not supplied.');
 $GLOBALS['TL_LANG']['tl_content']['mobileSRC']  = array('Mobile image', '700px and above. Override the image to be served to mobile screens.');
 $GLOBALS['TL_LANG']['tl_content']['tabletSRC']  = array('Tablet image', 'Between 700px and 768px. Override the image to be served to tablet screens.');
 $GLOBALS['TL_LANG']['tl_content']['desktopSRC'] = array('Desktop image', 'Between 768px and 1400px. Override the image to be served to desktop screens.');
@@ -20,4 +21,3 @@ $GLOBALS['TL_LANG']['tl_content']['img_size_preset']      = array('Size preset',
 $GLOBALS['TL_LANG']['tl_content']['img_use_custom_sizes'] = array('Use custom sizes', 'Use custom size settings for this element.');
 
 $GLOBALS['TL_LANG']['tl_content']['responsive_legend'] = 'Responsive sizes';
-

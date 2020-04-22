@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 1.0.22 (2019-10-15)
+--------------------------
+
+### Updated
+Don't use Contao's singleSRC field
+
 Version 1.0.21 (2019-10-15)
 --------------------------
 
