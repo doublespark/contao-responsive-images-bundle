@@ -200,8 +200,8 @@ class ContentResponsiveImage extends ContentElement
 
 		if(TL_MODE == 'FE')
 		{
-			$this->Template->defaultSRC = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
-			$this->Template->src       = 'bundles/doublesparkresponsiveimages/img/placeholder.jpg';
+			$this->Template->defaultSRC = 'bundles/doublesparkcontaoresponsiveimages/img/placeholder.jpg';
+			$this->Template->src       = 'bundles/doublesparkcontaoresponsiveimages/img/placeholder.jpg';
 		}
 
         if(($useCssBackground || $fullWidth) AND TL_MODE == 'FE')
@@ -245,7 +245,7 @@ class ContentResponsiveImage extends ContentElement
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
-            $cachePath = TL_ROOT.'/web/bundles/doublesparkresponsiveimages/cache/';
+            $cachePath = TL_ROOT.'/web/bundles/doublesparkcontaoresponsiveimages/cache/';
 
             if(!file_exists($cachePath.$cacheID.'.css'))
             {
@@ -258,7 +258,7 @@ class ContentResponsiveImage extends ContentElement
             $GLOBALS['TL_HEAD'][] = '<meta property="og:image" content="'.$imgURL.'"/>';
 
 
-            $GLOBALS['TL_CSS'][] = 'bundles/doublesparkresponsiveimages/cache/'.$cacheID.'.css';
+            $GLOBALS['TL_CSS'][] = 'bundles/doublesparkcontaoresponsiveimages/cache/'.$cacheID.'.css';
         }
 	}
 
