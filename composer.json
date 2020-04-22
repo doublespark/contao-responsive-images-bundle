@@ -1,6 +1,6 @@
 {
   "name": "doublespark/contao-responsive-images-bundle",
-  "type": "contao-bundle",
+  "type": "ds-contao-bundle",
   "description": "Contao 4 responsive images",
   "license": "MIT",
   "authors": [
@@ -15,10 +15,10 @@
   },
   "autoload": {
     "psr-4": {
-      "Doublespark\\ResponsiveImages\\": "src/"
+      "Doublespark\\ContaoResponsiveImagesBundle\\": "src/"
     }
   },
   "extra": {
-    "contao-manager-plugin": "Doublespark\\ResponsiveImages\\ContaoManager\\Plugin"
+    "contao-manager-plugin": "Doublespark\\ContaoResponsiveImagesBundle\\ContaoManager\\Plugin"
   }
 }
