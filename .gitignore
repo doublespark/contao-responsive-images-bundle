@@ -3,3 +3,5 @@
 error_log
 cache/*.html
 cache/*.css
+src/Resources/public/cache/*.css
+src/Resources/public/cache/*.html
