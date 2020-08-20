@@ -123,8 +123,6 @@ class ContentResponsiveImage extends ContentElement
             }
         }
 
-		$this->addImageToTemplate($this->Template, $this->arrData);
-
 		$this->Template->alt = $this->arrData['alt'];
 
         $arrMobile  = unserialize($this->imagesize_mobile);
