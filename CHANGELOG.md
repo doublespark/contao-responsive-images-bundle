@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 2.0.1 (2021-11-15)
+--------------------------
+
+### Updated
+Improve handling of opengraph tag: Make OG tag optional and only allow once per page.
+
 Version 2.0.0 (2020-09-24)
 --------------------------
 Release version 2.0.0
