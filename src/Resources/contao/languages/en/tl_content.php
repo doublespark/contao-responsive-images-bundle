@@ -19,5 +19,6 @@ $GLOBALS['TL_LANG']['tl_content']['responsiveImageFullWidth'] = array('Display f
 
 $GLOBALS['TL_LANG']['tl_content']['img_size_preset']      = array('Size preset', 'Select a size preset to apply to this element.');
 $GLOBALS['TL_LANG']['tl_content']['img_use_custom_sizes'] = array('Use custom sizes', 'Use custom size settings for this element.');
+$GLOBALS['TL_LANG']['tl_content']['img_use_ogtag']        = array('Use image in opengraph tag', 'Set this image to be used as the preview image when sharing a link to the page. Only the first image with this setting will be used.');
 
 $GLOBALS['TL_LANG']['tl_content']['responsive_legend'] = 'Responsive sizes';

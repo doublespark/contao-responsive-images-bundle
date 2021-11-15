@@ -251,10 +251,13 @@ class ContentResponsiveImage extends ContentElement
             }
 
             // Add OG tag for image
-            $protocol = Environment::get('ssl') ? 'https://' : 'http://';
-            $imgURL = $protocol.$_SERVER['HTTP_HOST'].'/'.$this->defaultSRC;
-            $GLOBALS['TL_HEAD'][] = '<meta property="og:image" content="'.$imgURL.'"/>';
+            if($this->img_use_ogtag && (!isset($GLOBALS['TL_HEAD']['ogImage']) || empty($GLOBALS['TL_HEAD']['ogImage'])))
+            {
+                $protocol = Environment::get('ssl') ? 'https://' : 'http://';
+                $imgURL = $protocol.$_SERVER['HTTP_HOST'].'/'.$this->defaultSRC;
 
+                $GLOBALS['TL_HEAD']['ogImage'] = '<meta property="og:image" content="'.$imgURL.'"/>';
+            }
 
             $GLOBALS['TL_CSS'][] = 'bundles/doublesparkcontaoresponsiveimages/cache/'.$cacheID.'.css';
         }
