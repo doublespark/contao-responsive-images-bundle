@@ -1,6 +1,13 @@
 Responsive images change log
 =================
 
+Version 2.0.2 (2021-12-09)
+--------------------------
+
+### Updated
+Show preview of image in BE.
+
+
 Version 2.0.1 (2021-11-15)
 --------------------------
 
