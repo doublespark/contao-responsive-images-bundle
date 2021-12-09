@@ -76,6 +76,12 @@ class ContentResponsiveImage extends ContentElement
 		}
 
 		$this->defaultSRC = $this->objFile->path;
+
+        if(TL_MODE === 'BE')
+        {
+            return '<img src="'.$this->defaultSRC.'">';
+        }
+
 		return parent::generate();
 	}
 
