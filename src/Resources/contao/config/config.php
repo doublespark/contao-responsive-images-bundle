@@ -12,7 +12,7 @@ $GLOBALS['TL_MODELS']['tl_ds_image_sizes'] = 'Doublespark\ContaoResponsiveImages
  */
 if(TL_MODE == 'FE')
 {
-	$GLOBALS['TL_JAVASCRIPT']['responsive_images'] = 'web/bundles/doublesparkcontaoresponsiveimagesbundle/js/responsive-images.js|static';
+	$GLOBALS['TL_JAVASCRIPT']['responsive_images'] = 'web/bundles/doublesparkcontaoresponsiveimagesbundle/js/responsive-images.min.js|static';
 
 	// Default breakpoints
 	$arrBreakPoints = array(
