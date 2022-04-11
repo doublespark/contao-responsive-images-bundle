@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 2.0.3 (2022-4-11)
+--------------------------
+
+### Updated
+Use minified JS file.
+
 Version 2.0.2 (2021-12-09)
 --------------------------
 
