@@ -45,7 +45,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         (
             'all' => array
             (
-                'label'               => &$GLOBALS['TL_LANG']['MSC']['all'],
                 'href'                => 'act=select',
                 'class'               => 'header_edit_all',
                 'attributes'          => 'onclick="Backend.getScrollOffset()" accesskey="e"'
@@ -55,32 +54,27 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         (
             'edit' => array
             (
-                'label'               => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['edit'],
                 'href'                => 'act=edit',
                 'icon'                => 'edit.gif'
             ),
             'copy' => array
             (
-                'label'               => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['copy'],
                 'href'                => 'act=copy',
                 'icon'                => 'copy.gif'
             ),
             'cut' => array
             (
-                'label'               => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['cut'],
                 'href'                => 'act=paste&amp;mode=cut',
                 'icon'                => 'cut.gif'
             ),
             'delete' => array
             (
-                'label'               => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['delete'],
                 'href'                => 'act=delete',
                 'icon'                => 'delete.gif',
                 'attributes'          => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
             ),
             'show' => array
             (
-                'label'               => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['show'],
                 'href'                => 'act=show',
                 'icon'                => 'show.gif'
             )
@@ -105,7 +99,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
             'sql'                     => "int(10) unsigned NOT NULL default '0'"
         ),
         'title' => array (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['title'],
             'exclude'                 => true,
             'search'                  => true,
             'inputType'               => 'text',
@@ -114,7 +107,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         ),
         'imagesize_mobile' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['imagesize_mobile'],
             'exclude'                 => true,
             'inputType'               => 'imageSize',
             'options'                 => System::getImageSizes(),
@@ -124,7 +116,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         ),
         'imagesize_tablet' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['imagesize_tablet'],
             'exclude'                 => true,
             'inputType'               => 'imageSize',
             'options'                 => System::getImageSizes(),
@@ -134,7 +125,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         ),
         'imagesize_desktop' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['imagesize_desktop'],
             'exclude'                 => true,
             'inputType'               => 'imageSize',
             'options'                 => System::getImageSizes(),
@@ -144,7 +134,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         ),
         'imagesize_large' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['imagesize_large'],
             'exclude'                 => true,
             'inputType'               => 'imageSize',
             'options'                 => System::getImageSizes(),
@@ -154,7 +143,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         ),
         'img_use_css_background' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['img_use_css_background'],
             'exclude'                 => true,
             'search'                  => true,
             'inputType'               => 'checkbox',
@@ -163,7 +151,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         ),
         'responsiveImageFullWidth' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ds_image_sizes']['responsiveImageFullWidth'],
             'exclude'                 => true,
             'search'                  => true,
             'inputType'               => 'checkbox',
