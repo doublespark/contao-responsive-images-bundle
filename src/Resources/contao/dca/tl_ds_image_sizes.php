@@ -109,7 +109,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getImageSizes(),
+            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
             'reference'               => &$GLOBALS['TL_LANG']['MSC'],
             'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
@@ -118,7 +118,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getImageSizes(),
+            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
             'reference'               => &$GLOBALS['TL_LANG']['MSC'],
             'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
@@ -127,7 +127,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getImageSizes(),
+            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
             'reference'               => &$GLOBALS['TL_LANG']['MSC'],
             'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
@@ -136,7 +136,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getImageSizes(),
+            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
             'reference'               => &$GLOBALS['TL_LANG']['MSC'],
             'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
