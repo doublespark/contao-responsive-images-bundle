@@ -1,6 +1,12 @@
 Responsive images change log
 =================
 
+Version 2.0.4 (2022-06-08)
+-------------------------
+- Fix undefined array key error from DCA
+- Remove labels from DCA
+- Use contao.image.sizes service for fetching image sizes
+
 Version 2.0.3 (2022-4-11)
 --------------------------
 
