@@ -1,6 +1,10 @@
 Responsive images change log
 =================
 
+Version 2.0.5 (2022-08-19)
+-------------------------
+- Add compatability with sites using "public" web root
+
 Version 2.0.4 (2022-06-08)
 -------------------------
 - Fix undefined array key error from DCA
