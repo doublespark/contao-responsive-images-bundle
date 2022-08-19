@@ -10,6 +10,7 @@ use Contao\ContentModel;
 use Contao\System;
 use Contao\Validator;
 use Doublespark\ContaoResponsiveImagesBundle\Models\DsImageSizesModel;
+use Symfony\Component\Filesystem\Filesystem;
 
 
 /**
@@ -249,7 +250,16 @@ class ContentResponsiveImage extends ContentElement
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
-            $cachePath = TL_ROOT.'/web/bundles/doublesparkcontaoresponsiveimages/cache/';
+            if((new Filesystem())->exists(TL_ROOT.'/web'))
+            {
+                $webDir = 'web'; // backwards compatibility
+            }
+            else
+            {
+                $webDir = 'public';
+            }
+
+            $cachePath = TL_ROOT.'/'.$webDir.'/bundles/doublesparkcontaoresponsiveimages/cache/';
 
             if(!file_exists($cachePath.$cacheID.'.css'))
             {
