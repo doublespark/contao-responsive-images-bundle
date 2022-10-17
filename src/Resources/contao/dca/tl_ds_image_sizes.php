@@ -1,5 +1,7 @@
 <?php
 
+use Contao\System;
+
 /**
  * Contao Open Source CMS
  *
