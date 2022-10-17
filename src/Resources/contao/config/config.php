@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 define('RESPONSIVE_IMAGES_VERSION', '1.0.21');
 
