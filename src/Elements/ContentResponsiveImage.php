@@ -78,7 +78,7 @@ class ContentResponsiveImage extends ContentElement
 
 		$this->defaultSRC = $this->objFile->path;
 
-        if(TL_MODE === 'BE')
+        if(System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest()))
         {
             return '<img src="'.$this->defaultSRC.'">';
         }
@@ -203,13 +203,15 @@ class ContentResponsiveImage extends ContentElement
 		$this->Template->desktop_url = $this->generateResponsiveURL($desktopSRC, $arrDesktop[0], $arrDesktop[1], $arrDesktop[2]);
 		$this->Template->large_url   = $this->generateResponsiveURL($largeSRC, $arrLarge[0], $arrLarge[1], $arrLarge[2]);
 
-		if(TL_MODE == 'FE')
+        $isFrontend = System::getContainer()->get('contao.routing.scope_matcher')->isFrontendRequest(System::getContainer()->get('request_stack')->getCurrentRequest());
+
+        if($isFrontend)
 		{
 			$this->Template->defaultSRC = 'bundles/doublesparkcontaoresponsiveimages/img/placeholder.jpg';
 			$this->Template->src       = 'bundles/doublesparkcontaoresponsiveimages/img/placeholder.jpg';
 		}
 
-        if(($useCssBackground || $fullWidth) AND TL_MODE == 'FE')
+        if(($useCssBackground || $fullWidth) AND $isFrontend)
         {
             $imageID = 'resImage_'.$this->id;
 

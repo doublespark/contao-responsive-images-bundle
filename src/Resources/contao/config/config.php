@@ -1,5 +1,8 @@
 <?php
 
+use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
+
 /**
  * Models
  */
@@ -8,7 +11,7 @@ $GLOBALS['TL_MODELS']['tl_ds_image_sizes'] = 'Doublespark\ContaoResponsiveImages
 /**
  * Load JS
  */
-if(TL_MODE == 'FE')
+if(System::getContainer()->get('contao.routing.scope_matcher')->isFrontendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
 {
 	$GLOBALS['TL_JAVASCRIPT']['responsive_images'] = 'web/bundles/doublesparkcontaoresponsiveimagesbundle/js/responsive-images.min.js|static';
 
