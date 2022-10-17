@@ -309,7 +309,9 @@ class ContentResponsiveImage extends ContentElement
 	{
 		$objFile = FilesModel::findByUuid($uuid);
 
-		if($objFile === null || !is_file(TL_ROOT . '/' . $objFile->path))
+        $rootDir = System::getContainer()->getParameter('kernel.project_dir');
+
+		if($objFile === null || !is_file($rootDir . '/' . $objFile->path))
 		{
 			return FALSE;
 		}
