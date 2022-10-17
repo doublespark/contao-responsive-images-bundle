@@ -38,11 +38,6 @@ $GLOBALS['TL_CTE']['media']['responsive_image'] = 'Doublespark\ContaoResponsiveI
 /**
  * BACK END MODULES
  */
-
-array_insert($GLOBALS['BE_MOD']['system'], 4, array
-(
-    'tl_ds_image_sizes' => array
-    (
-        'tables' => array('tl_ds_image_sizes')
-    )
-));
+$GLOBALS['BE_MOD']['system']['tl_ds_image_sizes'] = [
+    'tables' => ['tl_ds_image_sizes']
+];
