@@ -7,6 +7,7 @@ use Contao\ContentElement;
 use Contao\Environment;
 use Contao\FilesModel;
 use Contao\ContentModel;
+use Contao\FrontendTemplate;
 use Contao\System;
 use Contao\Validator;
 use Doublespark\ContaoResponsiveImagesBundle\Models\DsImageSizesModel;
@@ -218,7 +219,7 @@ class ContentResponsiveImage extends ContentElement
             $this->Template->useCSS = true;
             $this->Template->imgID  = $imageID;
 
-            $objCSS              = new \FrontendTemplate('css_responsive_image');
+            $objCSS              = new FrontendTemplate('css_responsive_image');
             $objCSS->imgID       = $imageID;
 
             $objCSS->fullWidth     = $fullWidth;
