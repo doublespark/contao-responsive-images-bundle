@@ -41,7 +41,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_mobile'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_mobile'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
-	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
 	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
@@ -62,7 +61,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_tablet'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_tablet'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
-	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
 	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
@@ -82,7 +80,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_desktop'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_desktop'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
-	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
 	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
@@ -103,7 +100,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_large'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_large'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
-	'options'                 => System::getImageSizes(),
 	'reference'               => &$GLOBALS['TL_LANG']['MSC'],
 	'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
