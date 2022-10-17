@@ -1,7 +1,5 @@
 <?php
 
-define('RESPONSIVE_IMAGES_VERSION', '1.0.21');
-
 /**
  * Models
  */
