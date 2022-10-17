@@ -252,7 +252,9 @@ class ContentResponsiveImage extends ContentElement
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
-            if((new Filesystem())->exists(TL_ROOT.'/web'))
+            $rootDir = System::getContainer()->getParameter('kernel.project_dir');
+
+            if((new Filesystem())->exists($rootDir.'/web'))
             {
                 $webDir = 'web'; // backwards compatibility
             }
@@ -261,7 +263,7 @@ class ContentResponsiveImage extends ContentElement
                 $webDir = 'public';
             }
 
-            $cachePath = TL_ROOT.'/'.$webDir.'/bundles/doublesparkcontaoresponsiveimages/cache/';
+            $cachePath = $rootDir.'/'.$webDir.'/bundles/doublesparkcontaoresponsiveimages/cache/';
 
             if(!file_exists($cachePath.$cacheID.'.css'))
             {
