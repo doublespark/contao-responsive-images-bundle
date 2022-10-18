@@ -246,12 +246,10 @@ class ContentResponsiveImage extends ContentElement
 			$objCSS->desktopBreakpoint = $arrBreakPoints['desktop'];
 			$objCSS->largeBreakpoint   = $arrBreakPoints['large'];
 
-			// Work around to stop output of HTML template tags in debug mode
-			$debugMode = Config::get('debugMode');
+			// Work around to stop output of HTML template comments
+            $objCSS->setDebug(false);
 
-            Config::set('debugMode',false);
             $css = $objCSS->parse();
-            Config::set('debugMode',$debugMode);
 
             $cacheID = md5($imageID.$this->Template->mobile_url.$this->Template->tablet_url.$this->Template->desktop_url.$this->Template->large_url.$css);
 
