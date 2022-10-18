@@ -295,7 +295,7 @@ class ContentResponsiveImage extends ContentElement
         $rootDir   = $container->getParameter('kernel.project_dir');
 
         $image = $container
-            ->get('contao.image.image_factory')
+            ->get('contao.image.factory')
             ->create($rootDir.'/'.$src, [$width, $height, $mode])
             ->getUrl($rootDir);
 
