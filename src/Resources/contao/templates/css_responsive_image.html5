@@ -1,7 +1,7 @@
 #<?php echo $this->imgID; ?> {
     display:block;
     overflow:hidden;
-    background-image:url('http<?php if(\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->mobile_url; ?>');
+    background-image:url('http<?php if(\Contao\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->mobile_url; ?>');
     background-repeat:no-repeat;
     background-position:center center;
     <?php if(!$this->fullWidth): ?>
@@ -14,7 +14,7 @@
 }
 @media screen and (min-width:<?php echo $this->tabletBreakpoint; ?>px){
     #<?php echo $this->imgID; ?> {
-        background-image:url('http<?php if(\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->tablet_url; ?>');
+        background-image:url('http<?php if(\Contao\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->tablet_url; ?>');
         <?php if(!$this->fullWidth): ?>
         max-width:<?php echo $this->tablet_width; ?>px;
         <?php endif; ?>
@@ -23,7 +23,7 @@
 }
 @media screen and (min-width:<?php echo $this->desktopBreakpoint; ?>px){
     #<?php echo $this->imgID; ?> {
-        background-image:url('http<?php if(\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->desktop_url; ?>');
+        background-image:url('http<?php if(\Contao\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->desktop_url; ?>');
         <?php if(!$this->fullWidth): ?>
         max-width:<?php echo $this->desktop_width; ?>px;
         <?php endif; ?>
@@ -32,7 +32,7 @@
 }
 @media screen and (min-width:<?php echo $this->largeBreakpoint; ?>px){
     #<?php echo $this->imgID; ?> {
-        background-image:url('http<?php if(\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->large_url; ?>');
+        background-image:url('http<?php if(\Contao\Environment::get('ssl')) echo 's'; ?>://<?php echo $_SERVER['HTTP_HOST'].'/'.$this->large_url; ?>');
         <?php if(!$this->fullWidth): ?>
         max-width:<?php echo $this->large_width; ?>px;
         <?php endif; ?>
