@@ -72,7 +72,9 @@ class ContentResponsiveImage extends ContentElement
 			return '';
 		}
 
-		if ($this->objFile === null || !is_file(TL_ROOT . '/' . $this->objFile->path))
+        $rootDir = System::getContainer()->getParameter('kernel.project_dir');
+
+		if ($this->objFile === null || !is_file($rootDir . '/' . $this->objFile->path))
 		{
 			return '';
 		}
