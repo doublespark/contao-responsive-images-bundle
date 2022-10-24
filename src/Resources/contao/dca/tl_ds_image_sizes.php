@@ -1,13 +1,7 @@
 <?php
 
 use Contao\System;
-
-/**
- * Contao Open Source CMS
- *
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
- */
+use Contao\DC_Table;
 
 /**
  * Table tl_ds_image_sizes
@@ -18,7 +12,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
     // Config
     'config' => array
     (
-        'dataContainer' => 'Table',
+        'dataContainer' => DC_Table::class,
         'sql' => array
         (
             'keys' => array
