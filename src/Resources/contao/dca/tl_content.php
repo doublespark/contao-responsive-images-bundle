@@ -2,16 +2,6 @@
 
 use Contao\System;
 
-/**
- * Contao Open Source CMS
- *
- * Copyright (c) 2005-2013 Leo Feyer
- *
- * @package Core
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
- */
-
 $GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},defaultSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption,img_use_ogtag;{responsive_legend},img_size_preset,img_use_custom_sizes;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'img_use_custom_sizes';
