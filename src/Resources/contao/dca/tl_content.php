@@ -22,7 +22,6 @@ $GLOBALS['TL_DCA']['tl_content']['subpalettes']['img_use_custom_sizes'] = 'image
 // Default
 $GLOBALS['TL_DCA']['tl_content']['fields']['defaultSRC'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['defaultSRC'],
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
@@ -32,7 +31,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['defaultSRC'] = array
 // Mobile -------------------------- //
 $GLOBALS['TL_DCA']['tl_content']['fields']['mobileSRC'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['mobileSRC'],
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
@@ -40,7 +38,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['mobileSRC'] = array
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_mobile'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_mobile'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
     'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
@@ -49,10 +46,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_mobile'] = array(
 );
 
 // Tablet -------------------------- //
-
 $GLOBALS['TL_DCA']['tl_content']['fields']['tabletSRC'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['tabletSRC'],
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
@@ -60,7 +55,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['tabletSRC'] = array
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_tablet'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_tablet'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
     'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
@@ -71,7 +65,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_tablet'] = array(
 // Desktop -------------------------- //
 $GLOBALS['TL_DCA']['tl_content']['fields']['desktopSRC'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['desktopSRC'],
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
@@ -79,7 +72,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['desktopSRC'] = array
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_desktop'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_desktop'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
     'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
@@ -88,10 +80,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_desktop'] = array(
 );
 
 // Large -------------------------- //
-
 $GLOBALS['TL_DCA']['tl_content']['fields']['largeSRC'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['largeSRC'],
 	'exclude'                 => true,
 	'inputType'               => 'fileTree',
 	'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'tl_class'=>'clr'),
@@ -99,7 +89,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['largeSRC'] = array
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_large'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imagesize_large'],
 	'exclude'                 => true,
 	'inputType'               => 'imageSize',
     'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
@@ -110,7 +99,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['imagesize_large'] = array(
 // Text field
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['image_text'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['text'],
 	'exclude'                 => true,
 	'search'                  => true,
 	'inputType'               => 'textarea',
@@ -119,7 +107,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['image_text'] = array(
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['img_use_css_background'] = array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['img_use_css_background'],
     'exclude'                 => true,
     'search'                  => true,
     'inputType'               => 'checkbox',
@@ -136,7 +123,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['img_use_ogtag'] = array(
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['responsiveImageFullWidth'] = array(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['responsiveImageFullWidth'],
 	'exclude'                 => true,
 	'search'                  => true,
 	'inputType'               => 'checkbox',
@@ -145,14 +131,12 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['responsiveImageFullWidth'] = array(
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['img_use_custom_sizes'] = array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['img_use_custom_sizes'],
     'inputType'               => 'checkbox',
     'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr', 'submitOnChange'=>true),
     'sql'                     => "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['img_size_preset'] = array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['img_size_preset'],
     'inputType'               => 'select',
     'foreignKey'              => 'tl_ds_image_sizes.title',
     'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr', 'includeBlankOption' => true),
