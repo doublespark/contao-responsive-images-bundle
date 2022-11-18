@@ -1,0 +1,28 @@
+#resImage_322 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/f/profile-cathedrals-20fd1671.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:600px;
+}
+@media screen and (min-width:700px){
+    #resImage_322 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/f/profile-cathedrals-20fd1671.jpg');
+                height:600px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_322 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/8/profile-cathedrals-565c58cb.jpg');
+                height:540px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_322 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/8/profile-cathedrals-565c58cb.jpg');
+                height:540px;
+    }
+}

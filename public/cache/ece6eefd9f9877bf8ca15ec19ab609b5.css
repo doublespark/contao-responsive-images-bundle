@@ -1,0 +1,28 @@
+#resImage_1035 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/1/cathedrals-and-churches-l-499dd60b.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1035 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/3/cathedrals-and-churches-l-2aea4774.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1035 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/6/cathedrals-and-churches-l-86d101f2.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1035 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/1/cathedrals-and-churches-l-693719f1.jpg');
+                height:350px;
+    }
+}

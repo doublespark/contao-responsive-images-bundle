@@ -1,0 +1,28 @@
+#resImage_323 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/0/profile-civic-2fbad4f4.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:600px;
+}
+@media screen and (min-width:700px){
+    #resImage_323 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/0/profile-civic-2fbad4f4.jpg');
+                height:600px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_323 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/2/profile-civic-50b628ff.jpg');
+                height:540px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_323 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/2/profile-civic-50b628ff.jpg');
+                height:540px;
+    }
+}

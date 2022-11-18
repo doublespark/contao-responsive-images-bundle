@@ -1,0 +1,28 @@
+#resImage_1109 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/c/sue-lane-2-873f76d3.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1109 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/0/sue-lane-2-d5520b60.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1109 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/2/sue-lane-2-af975368.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1109 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/4/sue-lane-2-06867db1.jpg');
+                height:350px;
+    }
+}

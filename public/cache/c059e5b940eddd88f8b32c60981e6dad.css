@@ -1,0 +1,28 @@
+#resImage_1073 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/3/amy-stevens-2-fe4ffc59.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1073 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/7/amy-stevens-2-6db3af76.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1073 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/0/amy-stevens-2-f4dbdbd3.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1073 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/5/amy-stevens-2-3c331b58.jpg');
+                height:350px;
+    }
+}

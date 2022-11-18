@@ -1,0 +1,28 @@
+#resImage_1131 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/d/gifted-north-233ac5d8.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1131 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/f/gifted-north-4ebe69b8.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1131 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/f/gifted-north-3ab9bfa3.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1131 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/a/gifted-north-d86d9cda.jpg');
+                height:350px;
+    }
+}

@@ -1,0 +1,28 @@
+#resImage_1010 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/c/communications-40ec6a11.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1010 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/b/communications-5434df99.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1010 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/9/communications-218cd6fd.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1010 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/0/communications-ac6df3ea.jpg');
+                height:350px;
+    }
+}

@@ -1,0 +1,28 @@
+#resImage_1100 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/6/julie-day-2-3e7834d2.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1100 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/f/julie-day-2-a94b5d26.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1100 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/7/julie-day-2-052f05ee.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1100 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/8/julie-day-2-b85ffa7c.jpg');
+                height:350px;
+    }
+}

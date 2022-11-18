@@ -1,0 +1,28 @@
+#resImage_1046 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/7/education-and-youth-l-cb689aaa.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1046 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/8/education-and-youth-l-c31a8f17.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1046 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/8/education-and-youth-l-c725ae3a.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1046 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/a/education-and-youth-l-4fd762f6.jpg');
+                height:350px;
+    }
+}

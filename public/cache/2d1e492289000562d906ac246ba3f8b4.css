@@ -1,0 +1,28 @@
+#resImage_1038 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/9/community-and-civic-7a0972c0.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1038 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/2/community-and-civic-0bb0b2fe.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1038 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/4/community-and-civic-ae1da6b9.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1038 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/8/community-and-civic-deb356bc.jpg');
+                height:350px;
+    }
+}

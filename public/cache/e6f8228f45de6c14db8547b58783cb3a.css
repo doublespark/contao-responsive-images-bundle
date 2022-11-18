@@ -1,0 +1,28 @@
+#resImage_1080 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/d/andrew-day-2-dc1c75d9.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1080 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/e/andrew-day-2-54cb799b.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1080 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/9/andrew-day-2-8f39d24d.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1080 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/d/andrew-day-2-e182ed73.jpg');
+                height:350px;
+    }
+}

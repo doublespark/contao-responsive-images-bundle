@@ -1,0 +1,28 @@
+#resImage_965 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/3/strategy-reviews-development-audits-e97739dc.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_965 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/b/strategy-reviews-development-audits-a4709772.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_965 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/c/strategy-reviews-development-audits-af7c7d62.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_965 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/a/strategy-reviews-development-audits-52e18f3c.jpg');
+                height:350px;
+    }
+}

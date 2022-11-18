@@ -1,0 +1,28 @@
+#resImage_937 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/c/feasibility-studies-453da4e0.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_937 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/8/feasibility-studies-31f2b873.jpg');
+                height:500px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_937 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/1/feasibility-studies-19100891.jpg');
+                height:500px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_937 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/e/feasibility-studies-9b1459c4.jpg');
+                height:500px;
+    }
+}

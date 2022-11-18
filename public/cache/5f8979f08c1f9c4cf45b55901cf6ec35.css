@@ -1,0 +1,28 @@
+#resImage_1050 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/5/sports-and-recreation-52fb3dac.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1050 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/5/sports-and-recreation-c303c552.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1050 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/e/sports-and-recreation-feb30f04.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1050 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/e/sports-and-recreation-9fa408d9.jpg');
+                height:350px;
+    }
+}

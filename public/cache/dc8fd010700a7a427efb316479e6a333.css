@@ -1,0 +1,28 @@
+#resImage_1032 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/6/arts-and-heritage-l-133cdccb.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1032 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/b/arts-and-heritage-l-e0ecf2fd.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1032 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/0/arts-and-heritage-l-f032c7d6.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1032 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/9/arts-and-heritage-l-e88d5ee8.jpg');
+                height:350px;
+    }
+}

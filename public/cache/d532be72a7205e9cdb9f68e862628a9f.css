@@ -1,0 +1,28 @@
+#resImage_1042 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/0/health-and-welfare-l-57f35432.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:280px;
+}
+@media screen and (min-width:700px){
+    #resImage_1042 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/1/health-and-welfare-l-711a45da.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_1042 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/b/health-and-welfare-l-0e4ad87b.jpg');
+                height:350px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_1042 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/c/health-and-welfare-l-fcb9388e.jpg');
+                height:350px;
+    }
+}

@@ -1,0 +1,28 @@
+#resImage_861 {
+    display:block;
+    overflow:hidden;
+    background-image:url('http://gifted-dev.localhost.com/assets/images/f/home-mobile-9aacc276.jpg');
+    background-repeat:no-repeat;
+    background-position:center center;
+        width:100%;
+    background-size: cover;
+        height:600px;
+}
+@media screen and (min-width:700px){
+    #resImage_861 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/9/home-642fc842.jpg');
+                height:500px;
+    }
+}
+@media screen and (min-width:980px){
+    #resImage_861 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/2/home-9dd433bb.jpg');
+                height:530px;
+    }
+}
+@media screen and (min-width:1400px){
+    #resImage_861 {
+        background-image:url('http://gifted-dev.localhost.com/assets/images/c/home-0cc3830d.jpg');
+                height:530px;
+    }
+}
