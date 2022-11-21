@@ -1,6 +1,13 @@
 Responsive images change log
 =================
 
+Version 2.1.0 (2022-11-21)
+-------------------------
+- Update for Contao 5
+- Remove 100% width option
+- Improve caching of CSS
+- Improve loading of JS for non-CSS background images
+
 Version 2.0.5 (2022-08-19)
 -------------------------
 - Add compatability with sites using "public" web root
