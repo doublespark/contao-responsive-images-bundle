@@ -80,7 +80,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
     // Palettes
     'palettes' => array
     (
-        'default'   => 'title,imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large,img_use_css_background,responsiveImageFullWidth'
+        'default'   => 'title,imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large,img_use_css_background'
     ),
 
     // Fields
@@ -138,14 +138,6 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
         'img_use_css_background' => array
-        (
-            'exclude'                 => true,
-            'search'                  => true,
-            'inputType'               => 'checkbox',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr'),
-            'sql'                     => "char(1) NOT NULL default ''"
-        ),
-        'responsiveImageFullWidth' => array
         (
             'exclude'                 => true,
             'search'                  => true,

@@ -2,12 +2,12 @@
 
 use Contao\System;
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type,headline;{source_legend},defaultSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,fullsize,caption,img_use_ogtag;{responsive_legend},img_size_preset,img_use_custom_sizes;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['responsive_image'] = '{type_legend},type;{source_legend},defaultSRC,mobileSRC,tabletSRC,desktopSRC,largeSRC;{image_legend},alt,title,imagemargin,imageUrl,caption,img_use_ogtag;{responsive_legend},img_size_preset,img_use_custom_sizes;{text_legend},image_text;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'img_use_custom_sizes';
 
 // Subpalettes
-$GLOBALS['TL_DCA']['tl_content']['subpalettes']['img_use_custom_sizes'] = 'imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large,img_use_css_background,responsiveImageFullWidth';
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['img_use_custom_sizes'] = 'imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large,img_use_css_background';
 
 // Default
 $GLOBALS['TL_DCA']['tl_content']['fields']['defaultSRC'] = array
@@ -110,14 +110,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['img_use_ogtag'] = array(
     'inputType'               => 'checkbox',
     'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr'),
     'sql'                     => "char(1) NOT NULL default ''"
-);
-
-$GLOBALS['TL_DCA']['tl_content']['fields']['responsiveImageFullWidth'] = array(
-	'exclude'                 => true,
-	'search'                  => true,
-	'inputType'               => 'checkbox',
-	'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr'),
-	'sql'                     => "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['img_use_custom_sizes'] = array(
