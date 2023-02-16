@@ -1,6 +1,10 @@
 Responsive images change log
 =================
 
+Version 2.1.1 (2023-02-16)
+-------------------------
+- Always use 'public' as webroot for Contao 5
+
 Version 2.1.0 (2022-11-21)
 -------------------------
 - Update for Contao 5
