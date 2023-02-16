@@ -222,16 +222,7 @@ class ContentResponsiveImage extends ContentElement
 
             $rootDir = System::getContainer()->getParameter('kernel.project_dir');
 
-            if((new Filesystem())->exists($rootDir.'/web'))
-            {
-                $webDir = 'web'; // backwards compatibility
-            }
-            else
-            {
-                $webDir = 'public';
-            }
-
-            $cachePath = $rootDir.'/'.$webDir.'/bundles/doublesparkcontaoresponsiveimages/cache/';
+            $cachePath = $rootDir.'/public/bundles/doublesparkcontaoresponsiveimages/cache/';
 
             $this->Template->useCSS = true;
             $this->Template->imgID  = $imageID;
