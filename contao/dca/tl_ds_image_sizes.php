@@ -75,7 +75,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
     // Palettes
     'palettes' => array
     (
-        'default'   => 'title,imagesize_mobile,imagesize_tablet,imagesize_desktop,imagesize_large,img_use_css_background'
+        'default'   => 'title,sizeMobile,sizeTablet,sizeDesktop,sizeLarge,cssBackground'
     ),
 
     // Fields
@@ -96,43 +96,35 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
             'eval'                    => array('maxlength'=>255, 'mandatory' => true),
             'sql'                     => "varchar(255) NOT NULL default ''"
         ),
-        'imagesize_mobile' => array
+        'sizeMobile' => array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
-            'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
+            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
-        'imagesize_tablet' => array
+        'sizeTablet' => array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
-            'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
+            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
-        'imagesize_desktop' => array
+        'sizeDesktop' => array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
-            'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
+            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
-        'imagesize_large' => array
+        'sizeLarge' => array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
-            'options'                 => System::getContainer()->get('contao.image.sizes')->getAllOptions(),
-            'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'helpwizard'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
+            'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
-        'img_use_css_background' => array
+        'cssBackground' => array
         (
             'exclude'                 => true,
             'search'                  => true,
