@@ -1,6 +1,5 @@
 <?php
 
-use Contao\System;
 use Contao\DC_Table;
 
 /**
