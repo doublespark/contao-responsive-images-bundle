@@ -8,7 +8,6 @@ use Contao\DC_Table;
  */
 $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
 (
-
     // Config
     'config' => array
     (
@@ -51,17 +50,17 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
             'edit' => array
             (
                 'href'                => 'act=edit',
-                'icon'                => 'edit.gif'
+                'icon'                => 'edit.svg'
             ),
             'copy' => array
             (
                 'href'                => 'act=copy',
-                'icon'                => 'copy.gif'
+                'icon'                => 'copy.svg'
             ),
             'cut' => array
             (
                 'href'                => 'act=paste&amp;mode=cut',
-                'icon'                => 'cut.gif'
+                'icon'                => 'cut.svg'
             ),
             'delete' => array
             (
@@ -69,11 +68,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
                 'icon'                => 'delete.gif',
                 'attributes'          => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
             ),
-            'show' => array
-            (
-                'href'                => 'act=show',
-                'icon'                => 'show.gif'
-            )
+            'show'
         )
     ),
 
