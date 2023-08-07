@@ -74,7 +74,7 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
     // Palettes
     'palettes' => array
     (
-        'default'   => 'title,sizeMobile,sizeTablet,sizeDesktop,sizeLarge,cssBackground'
+        'default'   => '{title_legend},title;{mobile_legend},sizeMobile;{tablet_legend},sizeTablet,minWidthTablet;{desktop_legend},sizeDesktop,minWidthDesktop;{large_legend},sizeLarge,minWidthLarge;'
     ),
 
     // Fields
@@ -109,12 +109,26 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
             'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
+        'minWidthTablet' => array
+        (
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'eval'                    => array('rgxp'=>'natural', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
+            'sql'                     => "int(10) unsigned NOT NULL default '0'"
+        ),
         'sizeDesktop' => array
         (
             'exclude'                 => true,
             'inputType'               => 'imageSize',
             'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
+        ),
+        'minWidthDesktop' => array
+        (
+            'exclude'                 => true,
+            'inputType'               => 'text',
+            'eval'                    => array('rgxp'=>'natural', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
+            'sql'                     => "int(10) unsigned NOT NULL default '0'"
         ),
         'sizeLarge' => array
         (
@@ -123,13 +137,12 @@ $GLOBALS['TL_DCA']['tl_ds_image_sizes'] = array
             'eval'                    => array('rgxp'=>'digit', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
-        'cssBackground' => array
+        'minWidthLarge' => array
         (
             'exclude'                 => true,
-            'search'                  => true,
-            'inputType'               => 'checkbox',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'clr'),
-            'sql'                     => "char(1) NOT NULL default ''"
-        )
+            'inputType'               => 'text',
+            'eval'                    => array('rgxp'=>'natural', 'nospace'=>true, 'mandatory' => true, 'tl_class'=>'clr'),
+            'sql'                     => "int(10) unsigned NOT NULL default '0'"
+        ),
     )
 );

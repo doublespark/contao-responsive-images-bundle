@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+
+  # Autoconfigure classes
+  Doublespark\ContaoResponsiveImagesBundle\:
+    resource: '../src/'
+
+  Doublespark\ContaoResponsiveImagesBundle\EventListener\ImageSizeOptionsCallback:
+    arguments:
+      - '@contao.image.sizes'

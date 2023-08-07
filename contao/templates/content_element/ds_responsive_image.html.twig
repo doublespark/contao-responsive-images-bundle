@@ -1,0 +1,12 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% block content %}
+    <div class="img-wrapper" role="img" aria-label="{{ altText }}">
+        <span id="{{ id }}" class="img"></span>
+        {% if text %}
+            <div class="image-text">
+                <div class="inside">{{ text|raw }}</div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock%}
