@@ -1,6 +1,15 @@
 Responsive images change log
 =================
 
+Version 2.2.0 (2023-08-07)
+-------------------------
+- Overhaul of element
+- CSS backgrounds only
+- Configurable breakpoints
+- Twig template
+- Added aria role
+- Tidied up field names
+
 Version 2.1.1 (2023-02-16)
 -------------------------
 - Always use 'public' as webroot for Contao 5
