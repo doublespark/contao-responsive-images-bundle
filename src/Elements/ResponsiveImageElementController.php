@@ -11,6 +11,7 @@ use Contao\CoreBundle\Image\Studio\Studio;
 use Contao\CoreBundle\Twig\FragmentTemplate;
 use Contao\Environment;
 use Contao\FilesModel;
+use Contao\StringUtil;
 use Doublespark\ContaoResponsiveImagesBundle\Models\DsImageSizesModel;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -75,20 +76,24 @@ class ResponsiveImageElementController extends AbstractContentElementController
          */
         $arrImages = [
             'default' => [
-                'image' => $this->getImage($model->dsImg_mobileSrc ?? $model->dsImg_defaultSrc, $sizeMobile)
+                'image' => $this->getImage($model->dsImg_mobileSrc ?? $model->dsImg_defaultSrc, $sizeMobile),
+                'size' => StringUtil::deserialize($sizeMobile)
             ],
             'sources' => [
                 'tablet' => [
                     'image'    => $this->getImage($model->dsImg_tabletSrc ?? $model->dsImg_defaultSrc, $sizeTablet),
-                    'minWidth' => $minWidthTablet
+                    'minWidth' => $minWidthTablet,
+                    'size' => StringUtil::deserialize($sizeTablet)
                 ],
                 'desktop' => [
                     'image'    => $this->getImage($model->dsImg_desktopSrc ?? $model->dsImg_defaultSrc, $sizeDesktop),
-                    'minWidth' => $minWidthDesktop
+                    'minWidth' => $minWidthDesktop,
+                    'size' => StringUtil::deserialize($sizeDesktop)
                 ],
                 'large' => [
                     'image'    =>  $this->getImage($model->dsImg_largeSrc ?? $model->dsImg_defaultSrc, $sizeLarge),
-                    'minWidth' => $minWidthLarge
+                    'minWidth' => $minWidthLarge,
+                    'size' => StringUtil::deserialize($sizeLarge)
                 ]
             ]
         ];
@@ -125,7 +130,7 @@ class ResponsiveImageElementController extends AbstractContentElementController
     protected function getCss(string|int $id, array $arrImages): string
     {
         $mobileSrc  = $arrImages['default']['image']['src'] ?? '';
-        $mobileHeight  = $arrImages['default']['image']['height'] ?? '0';
+        $mobileHeight  = $arrImages['default']['size'][1] ?? '0';
 
         $mediaQueries = [];
 
@@ -133,7 +138,7 @@ class ResponsiveImageElementController extends AbstractContentElementController
         {
             $src      = $source['image']['src'] ?? '';
             $minWidth = $source['minWidth'] ?? 0;
-            $height   = $source['image']['height'] ?? 0;
+            $height   = $source['size'][1] ?? 0;
 
             // Skip breakpoint if 0
             if((int)$minWidth === 0)
