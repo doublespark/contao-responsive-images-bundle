@@ -1,6 +1,10 @@
 Responsive images change log
 =================
 
+Version 2.2.1 (2023-09-08)
+-------------------------
+- Use CSS height specified in CMS, not the height of the generated image
+
 Version 2.2.0 (2023-08-07)
 -------------------------
 - Overhaul of element
