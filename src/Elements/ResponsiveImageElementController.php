@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Doublespark\ContaoResponsiveImagesBundle\Elements;
 
 use Contao\ContentModel;
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
 use Contao\CoreBundle\Image\Studio\Studio;
@@ -104,8 +105,19 @@ class ResponsiveImageElementController extends AbstractContentElementController
             return new Response('<img src="'.$img.'" />');
         }
 
-        // CSS which applies to all elements, only include in page once
-        $GLOBALS['TL_HEAD']['ds_responsive_img'] = "<style>.content-ds_responsive_image .img {display:block;overflow:hidden;background-repeat:no-repeat;background-position:center center;width:100%;background-size:cover;}</style>";
+        $className = 'content-ds_responsive_image';
+
+        if(!isset($GLOBALS['TL_HEAD']['ds_responsive_img']))
+        {
+            // From Contao 5.3, underscores are converted to dashes in class names
+            if(version_compare(ContaoCoreBundle::getVersion(), '5.3.0') >= 0)
+            {
+                $className = 'content-ds-responsive-image';
+            }
+
+            // CSS which applies to all elements, only include in page once
+            $GLOBALS['TL_HEAD']['ds_responsive_img'] = "<style>.$className .img {display:block;overflow:hidden;background-repeat:no-repeat;background-position:center center;width:100%;background-size:cover;}</style>";
+        }
 
         // CSS specific to this image
         $GLOBALS['TL_HEAD'][] = $this->getCss($model->id,$arrImages);
