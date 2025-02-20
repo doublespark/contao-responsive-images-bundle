@@ -1,6 +1,10 @@
 Responsive images change log
 =================
 
+Version 2.2.3 (2025-02-20)
+-------------------------
+- Handle cases where image is null
+
 Version 2.2.2 (2024-02-29)
 -------------------------
 - Don't include underscores in classname for Contao 5.3 and up
