@@ -34,6 +34,16 @@ class ResponsiveImageElementController extends AbstractContentElementController
      */
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
+        if(!$model->dsImg_defaultSrc)
+        {
+            if($this->isBackendScope($request))
+            {
+                return new Response('## NO IMAGE SELECTED ##');
+            }
+
+            return new Response('');
+        }
+
         // Get sizes
         $sizeMobile = '';
         $sizeTablet = '';
